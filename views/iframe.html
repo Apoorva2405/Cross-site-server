@@ -5,9 +5,13 @@
   <title>Cross-site iframe</title>
 
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-    }
+      #testdiv {
+          border: 1px solid black;
+      }
+      pre {
+        white-space: normal;
+        word-wrap: normal;
+      }
 
     h1 {
       font-size: 120%;
@@ -19,7 +23,10 @@
      These are the visible cookies from <b>document.cookie</b> in a
     cross-site context:
   </p>
-  <pre class="cookies"></pre>
+  <div id="testdiv">
+    <pre class="cookies"></pre>
+  </div>
+  
     <p>
      An image loaded from
     <a href="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png"

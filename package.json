@@ -1,7 +1,7 @@
 {
-  "name": "demo-same-site",
+  "name": "cross-site-server",
   "version": "0.0.1",
-  "description": "SameSite cookie tests",
+  "description": "SameSite cookie server for cross domain requests",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -15,10 +15,13 @@
     "node": "8.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/samesite-sandbox"
+    "url": "https://glitch.com/~cross-site-server"
   },
   "license": "Apache-2.0",
   "keywords": [
     "cookies"
-  ]
+  ],
+  "devDependencies": {
+    "fs": "0.0.1-security"
+  }
 }

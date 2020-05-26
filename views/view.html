@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<style>
+      #testdiv {
+          border: 1px solid black;
+      }
+      pre {
+        white-space: normal;
+        word-wrap: normal;
+      }
+</style>
+<head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Cross-site Cookie View</h1>
+    <div id="menu"></div>
+    <p>
+        These are the visible cookies from <b>document.cookie</b> in a
+       cross-site context:
+     </p>
+     <div id="testdiv">
+     <pre class="cookies"></pre>
+    </div>
+</body>
+<script>
+    const cookieContainer = document.querySelector(".cookies");
+    cookieContainer.textContent = document.cookie;
+</script>
+</html>

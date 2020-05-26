@@ -6,19 +6,6 @@ console.log("=== cookies " + document.cookie);
  function printCookie() {
     document.getElementById("print").innerHTML = document.cookie;
  }
- function fetchCookies(requestMethod) {
-    var req = new XMLHttpRequest();
-    req.withCredentials = true;
-    req.responseType = 'json';
-    req.open(requestMethod, "https://samesite-sandbox.glitch.me/cookies.json", true);
-    req.onload  = function() {
-       var jsonResponse = { method: requestMethod, cookies: req.response };
-       window.parent.postMessage(jsonResponse, "https://samesite-sandbox.glitch.me");
-    };
-    req.send(null);
-  }
-  
-  fetchCookies('GET');
 </script>
 <head>
     <meta charset="utf-8">
@@ -26,10 +13,6 @@ console.log("=== cookies " + document.cookie);
 </head>
 <body>
     <div id="menu"></div>
-    <p>Cookie with same site lax </p>
-    <button onclick="printCookie()">
-        Print Cookie
-    </button>
-    <p id="print"></p>
+    <div>You have successfuly completed the POST call</div>
 </body>
 </html>
